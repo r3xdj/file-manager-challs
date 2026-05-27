@@ -1,0 +1,17 @@
+services:
+  challenge_env:
+    build: .
+    image: file_manager_3_task_image
+
+  instancer:
+    image: alpine
+    ports:
+      - "10003:10003"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    entrypoint: 
+      - sh
+      - -c
+      - |
+        apk add --no-cache socat docker-cli
+        socat TCP-LISTEN:10003,reuseaddr,fork EXEC:"docker run -i --rm --network none file_manager_3_task_image"
