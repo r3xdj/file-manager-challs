@@ -61,3 +61,5 @@ docker-compose down
 
 > 註：Instancer 是 ChatGPT 幫我弄的，我還不會弄。
 > 註：出題與 exploit 撰寫過程用到有 ChatGPT, Gemini, Copilot AI 輔助。
+
+Official Writeup：[File Manager Official Writeup | R3X's Blog](https://r3xdj.github.io/blog/2026/05/27/File-Manager-Official-Writeup/)
